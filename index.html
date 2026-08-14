@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络乞讨 | 见者有份</title>
+    <script src="js/tailwind_v3.4.17.js"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="antialiased flex flex-col items-center justify-center relative">
+
+    <!-- 背景层 -->
+    <div class="bg-glow"></div>
+    <div class="god-rays"></div>
+    <div id="coin-rain"></div>
+
+    <!-- 音乐控制 -->
+    <button id="music-toggle"
+        class="fixed top-6 right-6 z-50 p-4 rounded-full glass-card text-yellow-400 hover:bg-yellow-400/20 transition-all">
+        <i class="fa-solid fa-music text-xl"></i>
+    </button>
+
+    <!-- 主容器 -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl flex flex-col items-center z-10">
+
+        <!-- 财神爷区域 -->
+        <div class="relative mb-8 group">
+            <div
+                class="absolute inset-0 bg-yellow-500/20 blur-3xl rounded-full group-hover:bg-yellow-500/30 transition-all duration-500">
+            </div>
+            <!-- 财神爷图片占位 -->
+            <img src="images/uncle.png" alt="发财的大叔得意洋洋." class="relative w-64 md:w-80 h-auto rounded-2xl object-cover">
+
+
+        </div>
+
+        <!-- 标题文字 -->
+        <h1
+            class="font-calligraphy text-5xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 via-yellow-500 to-yellow-700 drop-shadow-lg mb-4 text-center leading-tight">
+            为了暴富<br>请打赏给我
+        </h1>
+        <p class="text-yellow-200/80 text-lg mb-12 tracking-widest text-center">网络乞讨 · 用于生活 · 不可退还</p>
+
+        <!-- 收款码与互动区 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+
+            <!-- 左侧：微信收款 -->
+            <div
+                class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center hover:border-yellow-400 transition-colors">
+                <div class="mb-4 flex items-center gap-2">
+                    <i class="fa-brands fa-weixin text-3xl text-green-500"></i>
+                    <span class="text-xl font-bold text-white">微信支付</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-lg mb-4">
+                    <!-- 微信收款码占位 -->
+                    <img src="images/code_vx.jpg" alt="微信收款二维码图片" class="w-40 h-40 object-contain">
+                </div>
+                <p class="text-sm text-gray-400">长按识别图中二维码</p>
+            </div>
+
+            <!-- 右侧：支付宝收款 -->
+            <div
+                class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center hover:border-blue-400 transition-colors">
+                <div class="mb-4 flex items-center gap-2">
+                    <i class="fa-brands fa-alipay text-3xl text-blue-500"></i>
+                    <span class="text-xl font-bold text-white">支付宝</span>
+                </div>
+                <div class="bg-white p-3 rounded-xl shadow-lg mb-4">
+                    <!-- 支付宝收款码占位 -->
+                    <img src="images/code_zfb.jpg" alt="支付宝收款二维码图片" class="w-40 h-40 object-contain">
+                </div>
+                <p class="text-sm text-gray-400">长按识别图中二维码</p>
+            </div>
+        </div>
+
+        <!-- 摇一摇互动区 -->
+        <div id="shake-area"
+            class="mt-12 glass-card px-8 py-4 rounded-full flex items-center gap-4 cursor-pointer breathe hover:bg-yellow-500/10 transition-all select-none">
+            <i class="fa-solid fa-coins text-4xl text-yellow-400 shake-hard"></i>
+            <div class="flex flex-col">
+                <span class="text-xl font-bold text-yellow-100">摇一摇 掉金币</span>
+                <span class="text-xs text-yellow-400/70">手机晃动或点击此处</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="w-full py-6 text-center text-yellow-600/50 text-sm z-10">
+        <p>&copy; 2026 屌丝在线办事处. 祝您财源广进.</p>
+    </footer>
+
+    <!-- 音频元素 (使用免费版权音乐链接示例) -->
+    <audio id="bg-music" loop>
+        <source src="music/chinese-new-year.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
